@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Pelinkehittäjän portfolio - pelit, 3D-mallit ja projektit">
-  <title>Pelinkehittäjän Portfolio</title>
+  <meta name="description" content="Vili Huhtala – indie game developer portfolio: browser games, game jam entries and 3D work">
+  <title>Vili Huhtala – Indie Game Developer</title>
   <style>
     :root {
       --bg-dark: #0d1117;
@@ -162,6 +162,15 @@
       border: none;
     }
 
+
+    .media-placeholder {
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 1.5rem;
+      background: linear-gradient(135deg, var(--c1), var(--c2));
+      font-size: 1.35rem; font-weight: 800; color: #fff;
+      text-shadow: 0 2px 8px rgba(0,0,0,.35);
+    }
+
     .card-body {
       padding: 1.5rem;
       display: flex;
@@ -304,107 +313,88 @@
     <!-- HERO -->
     <header>
       <h1 class="hero-title">Vili Huhtala <span>/ Indie game developer</span></h1>
-      <p class="hero-subtitle">Gameplay Programmer & 3D Generalist — Fun ideas made real with fast deployment.</p>
+      <p class="hero-subtitle">Gameplay Programmer &amp; 3D Generalist — fun ideas made real with fast deployment.</p>
       <div class="hero-links">
-        <a href="https://monkefan2.itch.io/" target="_blank" rel="noopener" class="btn btn-primary">itch.io-sivu</a>
-        <a href="https://sketchfab.com" target="_blank" rel="noopener" class="btn">Sketchfab</a>
+        <a href="https://monkefan2.itch.io/" target="_blank" rel="noopener" class="btn btn-primary">itch.io</a>
         <a href="https://github.com/VHlearning3" target="_blank" rel="noopener" class="btn">GitHub</a>
-        <a href="mailto:oma.osoite@example.com" class="btn">Ota yhteyttä</a>
+        <!-- TODO: lisää julkinen yhteysosoite, esim. <a href="mailto:..." class="btn">Contact</a> -->
       </div>
     </header>
 
-    <!-- PROJEKTIT -->
-    <section id="projects">
-      <h2 class="section-title">Peliprojektit</h2>
+    <!-- PELIT -->
+    <section id="games">
+      <h2 class="section-title">Games</h2>
       <div class="projects-grid">
 
-        <!-- KORTTI 1: Peliklippi / GIF + itch.io Widget -->
         <article class="card">
-          <div class="media-container">
-            <video autoplay loop muted playsinline poster="assets/images/project1-poster.webp">
-              <source src="assets/videos/project1-gameplay.mp4" type="video/mp4">
-              <img src="assets/images/project1-fallback.gif" alt="Projektin esikatselu" loading="lazy">
-            </video>
+          <!-- TODO: vaihda kansikuvaan: <img src="assets/images/machine-lord.webp" alt="..." loading="lazy"> -->
+          <div class="media-container media-placeholder" style="--c1:#1f6feb;--c2:#a371f7">
+            <span>What Is the Lucky Number<br>of the Machine Lord?</span>
           </div>
           <div class="card-body">
             <div class="card-header">
-              <h3 class="card-title">Project Mayhem</h3>
-              <span class="card-year">2024</span>
+              <h3 class="card-title">What Is the Lucky Number of the Machine Lord?</h3>
+              <span class="card-year">2026</span>
             </div>
             <p class="card-desc">
-              3D-fysiikkapohjainen moninpeli. Vastasin <strong>hahmon liikkeistä, verkkokoodin synkronoinnista</strong> ja Steamworks-integraatiosta.
+              Game jam entry (theme: <strong>Lucky number</strong>). The robots have locked you in a room and only the Machine Lord's lucky number opens the door. Every wrong guess drops you to a lower floor, and you have to <strong>parkour your way back up</strong> to guess again.
             </p>
             <div class="tags">
-              <span class="tag">Godot 4</span>
-              <span class="tag">GDScript</span>
-              <span class="tag">Steamworks</span>
-            </div>
-
-            <!-- itch.io infowidget -->
-            <div class="embed-box">
-              <iframe src="https://itch.io/embed/123456?bg_color=161b22&fg_color=f0f6fc&link_color=58a6ff&border_color=30363d" height="167">
-                <a href="https://itch.io">Pelaa peliä itch.io:ssa</a>
-              </iframe>
-            </div>
-
-            <div class="card-actions">
-              <a href="https://itch.io" target="_blank" rel="noopener" class="btn btn-primary">Pelisivulle</a>
-              <a href="https://github.com" target="_blank" rel="noopener" class="btn">GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- KORTTI 2: Sketchfab 3D-upotus mediapaikalla -->
-        <article class="card">
-          <div class="media-container">
-            <iframe title="3D Asset Showcase" 
-                    allowfullscreen 
-                    mozallowfullscreen="true" 
-                    webkitallowfullscreen="true" 
-                    allow="autoplay; fullscreen; xr-spatial-tracking" 
-                    src="https://sketchfab.com/models/ESIMERKKI_MALLI_ID/embed?autostart=0&ui_controls=1&ui_infos=0">
-            </iframe>
-          </div>
-          <div class="card-body">
-            <div class="card-header">
-              <h3 class="card-title">Sci-Fi Mech Drone</h3>
-              <span class="card-year">2024</span>
-            </div>
-            <p class="card-desc">
-              Peliin optimoitu robottihahmo. Sisältää <strong>PBR-materiaalit</strong>, rigauksen ja liikeanimaatiot. Polycount: 8,400 tris.
-            </p>
-            <div class="tags">
-              <span class="tag">Blender</span>
-              <span class="tag">Substance Painter</span>
-              <span class="tag">Rigging</span>
-            </div>
-            <div class="card-actions">
-              <a href="https://sketchfab.com" target="_blank" rel="noopener" class="btn">Tarkastele Sketchfabissa</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- KORTTI 3: Pelattava WebGL-peli tai Jam-projekti -->
-        <article class="card">
-          <div class="media-container">
-            <img src="assets/images/jam-game.webp" alt="Game Jam pelin kuva" loading="lazy">
-          </div>
-          <div class="card-body">
-            <div class="card-header">
-              <h3 class="card-title">Dungeon Tactics</h3>
-              <span class="card-year">2023</span>
-            </div>
-            <p class="card-desc">
-              Game Jamissa toteutettu vuoropohjainen taktiikkapeli. <strong>Tiimin pääohjelmoija</strong>: vuorojärjestelmä ja polunhaku (A*).
-            </p>
-            <div class="tags">
-              <span class="tag">Unity 6</span>
+              <span class="tag">Unity</span>
               <span class="tag">C#</span>
+              <span class="tag">3D</span>
               <span class="tag">WebGL</span>
+              <span class="tag">Game jam</span>
             </div>
             <div class="card-actions">
-              <a href="https://itch.io" target="_blank" rel="noopener" class="btn btn-primary">Pelaa selaimessa</a>
-              <a href="https://github.com" target="_blank" rel="noopener" class="btn">Lähdekoodi</a>
+              <a href="https://monkefan2.itch.io/what-is-the-lucky-number-of-the-machine-lord" target="_blank" rel="noopener" class="btn btn-primary">Play on itch.io</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <!-- TODO: kansikuva assets/images/water-slide-mayhem.webp -->
+          <div class="media-container media-placeholder" style="--c1:#0ea5e9;--c2:#22d3ee">
+            <span>Water Slide Mayhem</span>
+          </div>
+          <div class="card-body">
+            <div class="card-header">
+              <h3 class="card-title">Water Slide Mayhem</h3>
+              <span class="card-year">2026</span><!-- TODO: tarkista vuosi -->
+            </div>
+            <p class="card-desc">
+              <!-- TODO: 1–2 lauseen kuvaus pelistä -->
+              Chaotic water slide game.
+            </p>
+            <div class="tags">
+              <span class="tag">TODO: moottori</span>
+            </div>
+            <div class="card-actions">
+              <a href="https://monkefan2.itch.io/water-slide-mayhem" target="_blank" rel="noopener" class="btn btn-primary">Play on itch.io</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <!-- TODO: kansikuva assets/images/ikea-monkey-2d.webp -->
+          <div class="media-container media-placeholder" style="--c1:#f59e0b;--c2:#2563eb">
+            <span>IKEA Monkey Game 2D</span>
+          </div>
+          <div class="card-body">
+            <div class="card-header">
+              <h3 class="card-title">IKEA Monkey Game 2D</h3>
+              <span class="card-year">2026</span><!-- TODO: tarkista vuosi -->
+            </div>
+            <p class="card-desc">
+              <!-- TODO: 1–2 lauseen kuvaus pelistä -->
+              2D monkey game.
+            </p>
+            <div class="tags">
+              <span class="tag">2D</span>
+              <span class="tag">TODO: moottori</span>
+            </div>
+            <div class="card-actions">
+              <a href="https://monkefan2.itch.io/ikea-monkey-game-2d" target="_blank" rel="noopener" class="btn btn-primary">Play on itch.io</a>
             </div>
           </div>
         </article>
@@ -412,40 +402,86 @@
       </div>
     </section>
 
-    <!-- OSAAMINEN & TYÖKALUT -->
+    <!-- KESKENERÄISET / GITHUB -->
+    <section id="in-development">
+      <h2 class="section-title">In development</h2>
+      <div class="projects-grid">
+
+        <article class="card">
+          <div class="card-body">
+            <div class="card-header">
+              <h3 class="card-title">Curse of Mökki</h3>
+            </div>
+            <p class="card-desc">Unity game project.</p>
+            <div class="tags"><span class="tag">Unity</span><span class="tag">C#</span></div>
+            <div class="card-actions">
+              <a href="https://github.com/VHlearning3/Curse-of-Mokki" target="_blank" rel="noopener" class="btn">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <div class="card-header">
+              <h3 class="card-title">Out of the Depths</h3>
+            </div>
+            <p class="card-desc">Underwater game in Unity, with custom Blender assets.</p>
+            <div class="tags"><span class="tag">Unity</span><span class="tag">Blender</span></div>
+            <div class="card-actions">
+              <a href="https://github.com/VHlearning3/Out-of-the-Depths" target="_blank" rel="noopener" class="btn">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <div class="card-header">
+              <h3 class="card-title">Castle of Dice</h3>
+            </div>
+            <p class="card-desc">3D game project in Unity.</p>
+            <div class="tags"><span class="tag">Unity</span><span class="tag">3D</span></div>
+            <div class="card-actions">
+              <a href="https://github.com/VHlearning3/Castle-of-Dice" target="_blank" rel="noopener" class="btn">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- OSAAMINEN -->
     <section id="skills">
-      <h2 class="section-title">Osaaminen & Työkalut</h2>
+      <h2 class="section-title">Skills &amp; Tools</h2>
       <div class="skills-grid">
         <div class="skill-card">
-          <h3>Pelimoottorit</h3>
+          <h3>Game engines</h3>
           <ul class="skill-list">
-            <li>Godot 4 (GDScript, C#)</li>
-            <li>Unity (C#, URP, WebGL)</li>
+            <li>Unity (C#, WebGL)</li>
+            <li>Godot 4 (GDScript)</li>
             <li>Roblox Studio (Luau)</li>
           </ul>
         </div>
         <div class="skill-card">
-          <h3>3D & Teksturointi</h3>
+          <h3>3D</h3>
           <ul class="skill-list">
-            <li>Blender (Mallinnus, UV, Riggaus)</li>
-            <li>Krita / GIMP</li>
-            <li>PBR-materiaalit & Shaderit</li>
+            <li>Blender (modeling, UV, rigging)</li>
+            <li>Low poly game assets</li>
+            <li>VRChat avatars</li>
           </ul>
         </div>
         <div class="skill-card">
-          <h3>Työnkulut & Järjestelmät</h3>
+          <h3>Workflow</h3>
           <ul class="skill-list">
-            <li>Git, GitHub & Git LFS</li>
-            <li>Steamworks SDK -integraatio</li>
-            <li>Fysiikkapohjainen pelilogiikka</li>
+            <li>Git &amp; GitHub</li>
+            <li>Game jams &amp; rapid prototyping</li>
+            <li>AI-assisted development</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
-      <p>&copy; 2026 Oma Nimi. Julkaistu GitHub Pagesilla.</p>
+      <p>&copy; 2026 Vili Huhtala</p>
     </footer>
   </div>
 
